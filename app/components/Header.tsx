@@ -55,7 +55,7 @@ const Header = ({ delay }: Props) => {
               </div>
             </Link>
             <div className='flex gap-2'>
-              <div className='hidden md:flex items-end gap-3'>
+              <div className='hidden md:flex items-end justify-center gap-3'>
                 {navLinks.map( i => (
                     <Link 
                         key={i.id}
@@ -67,13 +67,14 @@ const Header = ({ delay }: Props) => {
                             hover:scale-105 hover:font-bold `}>
                         {i.name}
                     </Link>
-
                 ))}
+                <div className='w-fit h-full grid place-items-center'>
+                  <ThemeSwitcher />
+                </div>
               </div>
-              <ThemeSwitcher />
-
             </div>
-            <div className='md:hidden flex items-center'>
+            <div className='md:hidden flex gap-4 items-center'>
+              <ThemeSwitcher />
               <button onClick={toggleMenu}>
                 {menuOpen ? <HiX size={30} /> : <HiMenu size={30} />}
               </button>
@@ -85,11 +86,19 @@ const Header = ({ delay }: Props) => {
               initial={{ height: 0 }}
               animate={{ height: 'auto' }}
               transition={{ duration: 0.5 }}
-              className='md:hidden flex flex-col items-center bg-white/80 rounded-lg shadow-lg p-4 mt-2'>
-              <Link onClick={closeMenu} href='/about' className='font-medium p-2 text-lg hover:scale-105 duration-200 hover:font-bold cursor-pointer'>About</Link>
-              <Link onClick={closeMenu} href='/portfolio' className='font-semibold p-2 text-lg hover:scale-105 duration-200 hover:font-bold cursor-pointer'>Portfolio</Link>
-              <Link onClick={closeMenu} href='/services' className='font-semibold p-2 text-lg hover:scale-105 duration-200 hover:font-bold cursor-pointer'>Services</Link>
-              <Link onClick={closeMenu} href='/contact' className='font-semibold p-2 text-lg hover:scale-105 duration-200 hover:font-bold cursor-pointer'>Contact</Link>
+              className='md:hidden flex flex-col items-center dark:bg-white/50 bg-black/50 dark:text-black text-white backdrop-blur-md  shadow-lg p-4 mt-2'>
+              {navLinks.map( i => (
+                    <Link 
+                        key={i.id}
+                        href={i.path}
+                        onClick={closeMenu}
+                        className={` w-full text-center font-normal p-2 cursor-pointer 
+                            ${pathname == i.path 
+                                ? 'shadow-xl bg-primary text-white font-semibold dark:border-white' : '' }
+                             `}>
+                        {i.name}
+                    </Link>
+                ))}
             </motion.div>
           )}
         </div>

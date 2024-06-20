@@ -8,6 +8,7 @@ import { getHomepageData } from '@/app/api/routes'
 import Animateslide from '../animation/Animateslide'
 import TypingAnimation from '../animation/TypingAnimation'
 import AnimateGradientText from '../animation/animateGradientText'
+import Link from 'next/link'
 
 type Props = {}
 
@@ -35,17 +36,17 @@ const Layer02 = (props: Props) => {
   
   return (
     <div className='w-full h-screen '>
-      <div className='w-full lg:p-32 md:p-24 pr-8 h-full relative overflow-hidden'>
+      <div className='w-full lg:p-32 md:p-24 h-full relative overflow-hidden'>
           <div className='w-fit h-fit  '>
            
-            <div className='w-full  flex  justify-between   h-full '>
+            <div className='w-full  flex items-center px-4 justify-between   h-full '>
             {landingData?.map(item => (
               
-                <div key={item.id} className='flex lg:flex-row flex-col lg:p-12 '>
+                <div key={item.id} className='flex w-full lg:flex-row flex-col lg:p-12 '>
                  
                   <div className=' flex flex-col gap-6 '>
                   
-                    <div className='w-[80%] flex flex-col gap-4'>
+                    <div className='lg:w-[80%] w-full flex flex-col gap-4'>
                       <TypingAnimation color='black' content={'About us'} size='normal' delay={0.018} speed={1}/>
                       <TypingAnimation color='black' content={'Who We Are'} size='Big' delay={0.1} speed={2}/>
                       {/* <div className='bg-gradient-to-r dark:from-white/80 from-black/80 dark:to-white/40 to-black/40 bg-clip-text text-transparent'>
@@ -64,14 +65,14 @@ const Layer02 = (props: Props) => {
                       </div>
                     </div>
                     <Animateslide delay={0.4} side='down'>
-                      <div className='w-fit '>
-                          <div className='w-full p-3 px-6 cursor-pointer hover:bg-black dark:hover:bg-white  bg-primary text-white dark:hover:text-black hover:text-white duration-300 ease-in-out' >
+                      <div className='w-fit h-full p-2'>
+                          <Link href={'/about'} className='w-full p-12 h-full cursor-pointer hover:bg-black dark:hover:bg-white  bg-primary text-white dark:hover:text-black hover:text-white duration-300 ease-in-out' >
                             More about us
-                          </div>
+                          </Link>
                       </div>
                     </Animateslide>
                   </div>
-                    <div className='w-full '>
+                    <div className='w-full py-4 '>
                   <Animateslide delay={0.4} side='up'>
                       <Image src={item.imageUrl.url} alt='image' width={400} height={400}/>
                   </Animateslide>

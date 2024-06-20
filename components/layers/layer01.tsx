@@ -7,6 +7,7 @@ import React, { useEffect, useState } from 'react'
 import Animateslide from '../animation/Animateslide';
 import Fade from '../animation/Fade';
 import TypingAnimation from '../animation/TypingAnimation';
+import { useRouter } from 'next/navigation';
 
 type Props = {}
 
@@ -27,6 +28,10 @@ const Layer01 = (props: Props) => {
         fetchData();
   }, []);
   
+  const router = useRouter()
+  const handleClick = () => {
+    router.push('/about')
+  }
   return (
     <div className='w-full backgroundImage h-screen grid place-items-center'>
       <div className='flex flex-col gap-5 items-center justify-center'>
@@ -46,7 +51,7 @@ const Layer01 = (props: Props) => {
               </Fade>
             </div>
             <Animateslide side='up' delay={1}>
-              <div className='p-3 px-6 w-fit dark:bg-black/20 hover:bg-primary dark:hover:bg-white dark:hover:text-black font-semibold hover:font-semibold hover:text-white cursor-pointer bg-white/80 backdrop-blur-sm'>
+              <div onClick={handleClick} className='p-3 px-6 w-fit dark:bg-black/20 hover:bg-primary dark:hover:bg-white dark:hover:text-black font-semibold hover:font-semibold hover:text-white cursor-pointer bg-white/80 backdrop-blur-sm'>
                 <h2 className='text-sm '>Read More</h2>
               </div>
             </Animateslide>
