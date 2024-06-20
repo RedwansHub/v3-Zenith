@@ -87,7 +87,7 @@ const LoadingCover = ({loading}: Props) => {
                                 animate={{scale: 1,  rotate: '0deg', opacity: 1 } }
                                 transition={{ duration: 2, delay: 3}}
                                 className='w-full'>
-                                    <Image src={'/images/Logo.svg'} alt='image' width={60} height={60}
+                                    <Image src={'/images/logo.svg'} alt='image' width={60} height={60}
                                         className=''
                                     />
                             </motion.div>
