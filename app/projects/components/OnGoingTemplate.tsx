@@ -28,7 +28,7 @@ const OnGoingTemplate = (props: Props) => {
   return (
     <div className='w-full h-full'>
       {homePageData?.map(item => (
-        <div className='w-full h-full grid lg:grid-cols-6  md:grid-cols-4 grid-cols-1 py-8 gap-2'>
+        <div key={item.id} className='w-full h-full grid lg:grid-cols-6  md:grid-cols-4 grid-cols-1 py-8 gap-2'>
           <div className='w-full h-full col-span-4 pb-6 lg:col-span-2 flex flex-col gap-4'>
               <h2 key={item.id} className='font-semibold text-xl pt-4'>
                   {item.name}
