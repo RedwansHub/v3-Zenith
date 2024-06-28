@@ -13,12 +13,12 @@ const QuestionPage = () => {
   
  
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full h-screen">
 
         <div className="sticky z-20 top-0">
           <Header />
         </div>
-        <div className='h-fit flex flex-col justify-center items-center overflow-hidden w-full '>
+        <div className='h-full flex flex-col justify-center items-center overflow-hidden w-full '>
             <Layer05 /> 
             <div className='w-full h-fit py-8 flex  justify-center items-center'>
             <Question />

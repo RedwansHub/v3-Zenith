@@ -34,7 +34,7 @@ const Section04 = (props: Props) => {
   console.log(landingData);
   
   return (
-    <div className='w-full h-full '>
+    <section id='section04' className='w-full h-full '>
       <div className='w-full lg:p-32 p-8 md:p-24 pr-8 h-full relative overflow-hidden'>
           <div className='w-fit h-fit  '>
            
@@ -63,7 +63,7 @@ const Section04 = (props: Props) => {
             </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

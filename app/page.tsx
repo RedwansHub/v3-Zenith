@@ -26,7 +26,7 @@ export default function Home() {
             setIsLoading(false);
             document.body.style.cursor = 'default'
             window.scrollTo(0,0);
-          }, 6300)
+          }, 5000)
       }
     )()
   }, [])

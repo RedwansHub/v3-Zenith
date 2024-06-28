@@ -34,7 +34,7 @@ const Section01 = (props: Props) => {
 
   
   return (
-    <div className='w-full h-full '>
+    <section  className='w-full h-full '>
       <div className='w-full lg:p-32 p-8 md:p-24 pr-8 h-full relative overflow-hidden'>
           <div className='w-fit h-fit  '>
            <>
@@ -84,7 +84,7 @@ const Section01 = (props: Props) => {
            </>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

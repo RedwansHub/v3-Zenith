@@ -31,7 +31,7 @@ const Section02 = (props: Props) => {
 
   
   return (
-    <div className='w-full h-fit '>
+    <section id='OurProcess' className='w-full h-fit '>
       <div className='w-full lg:p-32 md:p-24 p-8 pr-8 h-full relative overflow-hidden'>
           <div className='w-fit h-fit  '>
             <div className='w-full  flex   justify-between   h-full '>
@@ -65,7 +65,7 @@ const Section02 = (props: Props) => {
             </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

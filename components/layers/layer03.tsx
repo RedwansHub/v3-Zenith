@@ -33,8 +33,8 @@ const Layer03 = (props: Props) => {
             <div className=' grid lg:grid-cols-2 grid-cols-1 col-span-4 h-full w-full gap-6'>
               {newData?.map( i => (
                 <div key={i.id} className='w-full h-full'>
-                    <Animateslide side='down' delay={0.2 * i.id}>
-                      <div className=' relative group  border-black/10 dark:border-white/10  dark:hover:border-white hover:border-primary h-full border-2 w-full hover:cursor-pointer' key={i.id}>
+                    <Animateslide side='up' delay={0.1 * i.id}>
+                      <div className=' relative group h-full  shadow-md w-full hover:cursor-pointer' key={i.id}>
                         <ServiceSheets title={i.title} id={i.id} description={i.description} subDescription={i.subDescription} img={i.image} icon={i.icon}/>
                       </div>
                     </Animateslide>

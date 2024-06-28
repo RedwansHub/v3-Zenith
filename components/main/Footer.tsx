@@ -13,12 +13,22 @@ import { MdOutlineContentCopy } from "react-icons/md";
 import { CiLinkedin } from "react-icons/ci";
 import { IoLogoWhatsapp } from "react-icons/io5";
 import Animateslide from '../animation/Animateslide'
+import { useRouter } from 'next/navigation'
 type Props = {}
 
 const Footer = (props: Props) => {
+    
+    const router = useRouter()
+    const instaLink = 'https://www.instagram.com/zenithconstruction_/?igsh=MXBpYTZoNzViM2Y5eQ%3D%3D'
+    
     const HandleCopy = ( item : string, text : string ) => {
-        navigator.clipboard.writeText(text);
-        toast.success(`${item} Copied`)
+        if(item == 'Instagram') {
+            window.open(instaLink, '_blank');
+        } else {
+            navigator.clipboard.writeText(text);
+            toast.success(`${item} Copied`)
+        }
+        
     }
 
     
@@ -50,6 +60,7 @@ const Footer = (props: Props) => {
             };
             fetchData();
     }, []);
+
 
   return (
     <div>
@@ -169,7 +180,7 @@ const Footer = (props: Props) => {
                             <a href='/services' className='font-medium p-1 text-sm lg:text-xs hover:scale-105 duration-200 hover:font-bold cursor-pointer '>Services</a>
                             </Animateslide>
                             <Animateslide delay={0.2} side='left'>
-                            <a href='/askQuestion' className='font-medium p-1 text-sm lg:text-xs hover:scale-105 duration-200 hover:font-bold cursor-pointer '>FAQ</a>
+                            <a href='/FAQ' className='font-medium p-1 text-sm lg:text-xs hover:scale-105 duration-200 hover:font-bold cursor-pointer '>FAQ</a>
                             </Animateslide>
                             <Animateslide delay={0.2} side='left'>
                             <a href='/contact' className='font-medium p-1 text-sm lg:text-xs hover:scale-105 duration-200 hover:font-bold cursor-pointer '>Contact</a>
@@ -178,7 +189,7 @@ const Footer = (props: Props) => {
                     </div>
                 </div>
             </div>
-           <h2 className='font-medium text-xs py-4 text-white/55'>All rights Reserved. @ 2024 Zenith Construction</h2>
+           <h2 className='font-medium text-xs py-4 text-white/55'>All Rights Reserved. @ 2024 Zenith Construction</h2>
 
         </div>
     </div>

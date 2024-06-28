@@ -35,7 +35,7 @@ const Section03 = (props: Props) => {
 
   
   return (
-    <div className='w-full h-fit '>
+    <section id='OurValues' className='w-full h-fit '>
       <div className='w-full lg:p-32 md:p-24 p-8 pr-8 h-full relative overflow-hidden'>
           <div className='w-fit h-fit  '>
             <div className='w-full  flex   justify-between   h-fit '>
@@ -48,8 +48,8 @@ const Section03 = (props: Props) => {
                         <div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1  gap-4 w-f'>
                           {valueData?.map(
                             (item, idx) => (
-                              <Card key={item.id} className='flex flex-col p-4 dark:hover:border-white hover:border-primary border-2 border-transparent' >
-                                <TypingAnimation color='black' delay={0.1} content={item.title} speed={0.6} size='normal'/>
+                              <Card key={item.id} className='flex flex-col p-4  hover:border-primary/50 hover:shadow-lg border-2 border-transparent' >
+                                <TypingAnimation color='black' delay={0.05} content={item.title} speed={0.2} size='normal'/>
                                 {/* <p className='font-semibold dark:text-white text-lg text-primary'>{item.title}</p> */}
                                 <Fade>
                                   <p className='text-sm'>{item.description}</p>
@@ -64,7 +64,7 @@ const Section03 = (props: Props) => {
             </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

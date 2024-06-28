@@ -17,12 +17,10 @@ const AboutPage = (props: Props) => {
         <div className="sticky z-20 top-0">
           <Header />
         </div>
-
           <Section01 />
           <Section02 />
           <Section03 />
           <Section04 />
-      
       <Footer />
       </div>
   )

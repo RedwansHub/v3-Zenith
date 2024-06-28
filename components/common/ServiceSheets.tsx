@@ -55,7 +55,7 @@ const ServiceSheets = ({
   return (
         <Sheet >
         <SheetTrigger>
-            <div className="p-4 relative w-full h-full flex gap-4 items-center ">
+            <div className="p-4 border  border-black/10 dark:border-white/10  dark:hover:border-white hover:border-primary  relative w-full h-full flex gap-4 items-center ">
                 
                 <div className=" flex flex-col text-left gap-4 h-full ">
                     <h2 className="font-semibold">{title}</h2>

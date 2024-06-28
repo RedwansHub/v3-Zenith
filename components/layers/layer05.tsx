@@ -35,14 +35,14 @@ const Layer05 = (props: Props) => {
   return (
     <div className='w-full h-full'>
         <div className='w-full h-full flex flex-col justify-center items-center p-4 lg:px-48'>
-            <div className='w-full py-4 flex flex-col gap-3'>
+            <div className='w-full py-4  flex flex-col gap-3'>
               <TypingAnimation color='black' content={'Frequently Asked Questions'} size='large' delay={0.05} speed={1}/>
-            <p className=' font-light '>Ask Anything you want to know about our services. We are ready to answer all your questions.</p>
+            <p className=' font-light py-4'>Ask Anything you want to know about our services. We are ready to answer all your questions.</p>
             </div>
             <div className=' flex flex-col w-full'>
                 {questionData?.map ( (item , idx)=> (
                     <div key={item.id}>
-                        <Animateslide delay={0.08 * idx } side='down'>
+                        <Animateslide delay={0.02 * idx } side='down'>
                             <Accordion type="single" collapsible>
                                 <AccordionItem value="item-1">
                                     <AccordionTrigger>

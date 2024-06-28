@@ -11,7 +11,7 @@ const ServicePage = (props: Props) => {
   return (
     <div className="relative w-full h-full">
         <div className="sticky z-20 top-0">
-          <Header delay={0.1}  />
+          <Header  />
         </div>
         <div className='h-full w-full flex flex-col justify-center items-center    '>
             <ServiceScreen />
