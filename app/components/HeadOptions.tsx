@@ -74,7 +74,7 @@ const HeadOptions = ({ name, path, subOptions }: HeadProps) => {
       {name === 'Support' ? 
         <>
         {subOptions && (
-          <HoverCardContent className={`w-fit flex flex-col gap-2  bg-primary/5 border border-primary/50 backdrop-blur-md  `}>
+          <HoverCardContent className={`w-fit flex flex-col gap-2 dark:bg-primary/80 dark:text-white  bg-primary/5 border border-primary/50 backdrop-blur-md  `}>
             {subOptions.map(sub => (
               <a
                 key={sub.id}
@@ -89,7 +89,7 @@ const HeadOptions = ({ name, path, subOptions }: HeadProps) => {
         : 
         <>
         {subOptions && (
-          <HoverCardContent className={`w-fit flex flex-col gap-2 bg-primary/5 border border-primary/50 backdrop-blur-md  `}>
+          <HoverCardContent className={`w-fit flex flex-col gap-2 dark:bg-primary/80 dark:text-white  bg-primary/5 border border-primary/50 backdrop-blur-md  `}>
             {subOptions.map(sub => (
               <a
                 key={sub.id}
