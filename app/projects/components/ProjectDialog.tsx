@@ -72,7 +72,7 @@ export function DialogDemo() {
             </DialogHeader>
             <div className="grid gap-4 py-4">
               {project.images.map((image, index) => (
-                <div>
+                <div key={index}>
                     <FullScreenImageModal 
                             image={image}
                         />
