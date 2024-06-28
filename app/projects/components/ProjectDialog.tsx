@@ -64,7 +64,7 @@ export function DialogDemo() {
                 {project.description}
               </DialogDescription>
                 <div className='w-full flex items-center gap-4 pt-4  '>
-                    <h2 className='text-sm font-bold text-primary'>Project Status</h2>
+                    <h2 className='text-sm font-bold dark:text-white text-primary'>Project Status</h2>
                     <div className=' border border-primary text-sm shadow-lg font-semibold hover:bg-primary cursor-none hover:text-white w-fit px-4 rounded-lg p-2'>
                     In development
                     </div>
